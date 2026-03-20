@@ -188,16 +188,14 @@ export const INTERNSHIP = {
   time: "2024.07 - 2024.09",
   details: {
     zh: [
-      "需求洞察：在坝河河口蓄洪区建设工程中，负责胡园station及亮马河总体现划设计与关键模块（如景观护栏）的详细设计。",
-      "AI辅助设计：围绕护栏设计，以人体工程学为依据，融合意向表达概念，优化护栏高度与扶手弧度。",
-      "方案迭代：主导亮马河全流程设计，协调多方资源解决技术与落地冲突，确保产品核心体验符合预期。",
-      "协同落地：基于用户反馈与行为数据，提炼未被满足的需求点，思考景观设施的商品化策略。"
+      "用户调研与需求洞察：围绕坝河口公共空间项目，通过实地走访，访谈 120+位用户，结合SWOT及业态分析，提炼出安全性、识别度、文化表达 3 大设计需求维度，构建明确的评估标准。",
+      "AI视觉创意与评估：运用Midjourney、Stable Diffusion等工具，根据需求维度针对性生成 20+ 版概念参考图。对生成结果的视觉比例、风格统一性及场景匹配度进行评估筛选，沉淀出一套适用于公共设施的视觉风格方案。",
+      "美学落地与体验优化：协同技术团队将方案落地至护栏高度、扶手弧度等具体细节。结合人体工学与使用场景进行 5轮体验调优，在保障安全功能的同时提升了文化审美表达，推动方案采纳，并将调优思路沉淀为可复用的SOP。"
     ],
     en: [
-      "Requirement Insight: Responsible for the detailed design of Huyuan Station and Liangma River master planning in the Bahe River flood storage area project.",
-      "AI-Assisted Design: Optimized guardrail height and handrail curvature based on ergonomics and conceptual intent.",
-      "Iteration: Led the full-process design of Liangma River, coordinating resources to resolve technical conflicts and ensure core experience.",
-      "Collaboration: Refined unmet needs based on user feedback and behavioral data, exploring commercialization strategies for landscape facilities."
+      "User research and demand Insight: Focusing on the public space project at the Dam Estuary, through on-site visits and interviews with over 120 users, combined with SWOT and business type analysis, three major design demand dimensions of safety, recognition, and cultural expression were extracted, and clear evaluation criteria were established.",
+      "AI Visual Creativity and Evaluation: Utilizing tools such as Midjourney and Stable Diffusion, generate over 20 versions of concept reference images specifically based on the demand dimensions. Evaluate and screen the visual proportions, style uniformity and scene matching degree of the generated results, and distill a set of visual style solutions suitable for public facilities.",
+      "Aesthetic implementation and experience optimization: Collaborate with the technical team to implement the solution in specific details such as the height of the guardrail and the curvature of the handrail. Five rounds of experience optimization were carried out in combination with ergonomics and usage scenarios. While ensuring safety functions, the cultural aesthetic expression was enhanced, promoting the adoption of the plan and consolidating the optimization ideas into reusable Sops."
     ]
   }
 };
