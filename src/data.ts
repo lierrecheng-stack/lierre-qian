@@ -216,14 +216,14 @@ export const PROJECTS: Project[] = [
       en: "User Research: Led a team to survey 6 blocks, conducting questionnaires and in-depth interviews with 52 people from residents, government, and school-enterprise groups to clarify the needs for 'route optimization and learning through education'.\n\nProduct Positioning: Proposed the 'Rural Academy' positioning, combining spatial design with educational research to create a physical product integrating cultural display and scene experience.\n\nProject Management: Conducted 10+ design meetings with the construction side, optimizing models and drawings to ensure clear design intent. Established a long-term operation mechanism to ensure sustainable use. Became the first 'Rural Study' theme public space in the area." 
     },
     tags: ["Rural Revitalization", "Project Management", "Spatial Design"],
-    image: "./images/project-cover/1.jpg",
-    heroImage: "./images/project-cover/1.jpg",
+    image: "/images/project-cover/1.jpg",
+    heroImage: "/images/project-cover/1.jpg",
     sections: [
       {
         id: "topic",
         title: { zh: "01 / 缘起 · 乡村的呼唤", en: "01 / Origin · Call of the Countryside" },
         content: { zh: "赞皇研学基地项目旨在通过空间改造，激发乡村活力。我们深入调研了当地的建筑特色与居民生活习惯。", en: "The Zanhuang research base project aims to stimulate rural vitality through spatial transformation. We deeply researched local architectural features and residents' habits." },
-        images: ["./images/project-cover/1.jpg"]
+        images: ["/images/project-cover/1.jpg"]
       }
     ],
     closing: { zh: "设计不仅是美化，更是对土地的尊重与赋能。", en: "Design is not just beautification, but respect and empowerment for the land." }
@@ -239,14 +239,14 @@ export const PROJECTS: Project[] = [
       en: "Preliminary Research: Systematically reviewed project background and visual narrative clues for the Chongqing Medical University westward migration theme. Conducted field research on material technology and supplier capabilities, providing key support for the winning bid.\n\nAIGC Design: Assisted in line drawing and used Midjourney to generate 30+ composition intention maps, shortening the concept proposal cycle from 2 weeks to 5 days. 3 out of 5 creative schemes were adopted.\n\nCollaboration: Learned casting processes and engineering cost knowledge to formulate modular implementation plans. Communicated with multiple parties to balance design expression, feasibility, and budget constraints." 
     },
     tags: ["Public Art", "AI-Assisted", "Execution"],
-    image: "./images/project-cover/2.jpg",
-    heroImage: "./images/project-cover/2.jpg",
+    image: "/images/project-cover/2.jpg",
+    heroImage: "/images/project-cover/2.jpg",
     sections: [
       {
         id: "topic",
         title: { zh: "01 / 构思 · 历史的厚度", en: "01 / Conception · Thickness of History" },
         content: { zh: "《向西而歌》浮雕项目通过艺术化的手法展现了西迁精神。AI辅助设计大大提升了创作效率。", en: "The 'Song to the West' relief project showcases the spirit of westward migration through artistic means. AI-assisted design significantly improved creative efficiency." },
-        images: ["./images/project-cover/2.jpg"]
+        images: ["/images/project-cover/2.jpg"]
       }
     ],
     closing: { zh: "艺术是连接过去与未来的桥梁。", en: "Art is a bridge connecting the past and the future." }
@@ -263,14 +263,14 @@ export const PROJECTS: Project[] = [
       en: "Platform Operation: Responsible for platform growth and operation strategy for art education part-time scenarios. Identified core needs for both teachers and institutions to support the transition from early validation to large-scale operation.\n\nGrowth Optimization: Executed content and community growth strategies, with single posts reaching 1000+ views. Managed 8 communities covering 3600+ people. Optimized the teacher matching process in the mini-program based on feedback.\n\nVisual Packaging: Led the design of roadshow PPTs and promotional materials. Clearly communicated the business model and service value through visualization. Increased teacher scale to 400+ with a 90%+ matching success rate." 
     },
     tags: ["Product Design", "Growth Strategy", "Art Education"],
-    image: "./images/project-cover/3.jpg",
-    heroImage: "./images/project-cover/3.jpg",
+    image: "/images/project-cover/3.jpg",
+    heroImage: "/images/project-cover/3.jpg",
     sections: [
       {
         id: "concept",
         title: { zh: "01 / 核心理念", en: "01 / Core Concept" },
         content: { zh: "壹派致力于打破艺术教育的边界，通过数字化手段连接创作者与学习者。", en: "Yi Pai is committed to breaking the boundaries of art education, connecting creators and learners through digital means." },
-        images: ["./images/project-cover/3.jpg"]
+        images: ["/images/project-cover/3.jpg"]
       }
     ],
     closing: { zh: "让艺术触手可及。", en: "Making art accessible to everyone." }
@@ -286,12 +286,12 @@ export const WORKS: Work[] = [
     time: "2024",
     location: { zh: "雪山环境", en: "Snow Mountain Environment" },
     role: { zh: "主创设计师", en: "Lead Designer" },
-    image: "./images/portfolio-cover/cover1.jpg",
+    image: "/images/portfolio-cover/cover1.jpg",
     intro: { zh: "将“异托邦”概念引入雪山环境下的景观设计领域。", en: "Introducing the concept of 'Heterotopia' into snow mountain landscape design." },
     gallery: [
-      "./images/portfolio/snowmountain/1.jpg",
-      "./images/portfolio/snowmountain/2.jpg",
-      "./images/portfolio/snowmountain/3.jpg"
+      "/images/portfolio/snowmountain/1.jpg",
+      "/images/portfolio/snowmountain/2.jpg",
+      "/images/portfolio/snowmountain/3.jpg"
     ]
   },
   {
@@ -301,14 +301,14 @@ export const WORKS: Work[] = [
     time: "2024",
     location: { zh: "城市空间", en: "Urban Space" },
     role: { zh: "景观规划设计", en: "Independent Designer" },
-    image: "./images/portfolio-cover/cover2.jpg",
+    image: "/images/portfolio-cover/cover2.jpg",
     intro: { zh: "本项目关注城市中流浪动物的生活空间。", en: "This project focuses on urban stray animals' living spaces." },
     gallery: [
-      "./images/portfolio/dog/1.jpg",
-      "./images/portfolio/dog/2.jpg",
-      "./images/portfolio/dog/3.jpg",
-      "./images/portfolio/dog/4.jpg",
-      "./images/portfolio/dog/5.jpg"
+      "/images/portfolio/dog/1.jpg",
+      "/images/portfolio/dog/2.jpg",
+      "/images/portfolio/dog/3.jpg",
+      "/images/portfolio/dog/4.jpg",
+      "/images/portfolio/dog/5.jpg"
     ]
   },
   {
@@ -318,12 +318,12 @@ export const WORKS: Work[] = [
     time: "2024",
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
-    image: "./images/portfolio-cover/cover3.jpg",
+    image: "/images/portfolio-cover/cover3.jpg",
     intro: { zh: "探索高塔空间的景观设计理念。", en: "Exploring design concepts for tower spaces." },
     gallery: [
-      "./images/portfolio/tower/1.jpg",
-      "./images/portfolio/tower/2.jpg",
-      "./images/portfolio/tower/3.jpg"
+      "/images/portfolio/tower/1.jpg",
+      "/images/portfolio/tower/2.jpg",
+      "/images/portfolio/tower/3.jpg"
     ]
   },
   {
@@ -333,12 +333,12 @@ export const WORKS: Work[] = [
     time: "2024",
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
-    image: "./images/portfolio-cover/cover4.jpg",
+    image: "/images/portfolio-cover/cover4.jpg",
     intro: { zh: "探索城市园艺空间设计的创新方式。", en: "Exploring innovative approaches to urban garden design." },
     gallery: [
-      "./images/portfolio/garden/1.jpg",
-      "./images/portfolio/garden/2.jpg",
-      "./images/portfolio/garden/3.jpg"
+      "/images/portfolio/garden/1.jpg",
+      "/images/portfolio/garden/2.jpg",
+      "/images/portfolio/garden/3.jpg"
     ]
   },
   {
@@ -348,14 +348,14 @@ export const WORKS: Work[] = [
     time: "2024",
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
-    image: "./images/portfolio-cover/cover5.jpg",
+    image: "/images/portfolio-cover/cover5.jpg",
     intro: { zh: "探索工作空间的设计创新。", en: "Exploring innovative design for workplace spaces." },
     gallery: [
-      "./images/portfolio/workplace/1.jpg",
-      "./images/portfolio/workplace/2.jpg",
-      "./images/portfolio/workplace/3.jpg",
-      "./images/portfolio/workplace/4.jpg",
-      "./images/portfolio/workplace/5.jpg"
+      "/images/portfolio/workplace/1.jpg",
+      "/images/portfolio/workplace/2.jpg",
+      "/images/portfolio/workplace/3.jpg",
+      "/images/portfolio/workplace/4.jpg",
+      "/images/portfolio/workplace/5.jpg"
     ]
   },
 {
@@ -365,7 +365,7 @@ export const WORKS: Work[] = [
   time: "2024",
   location: { zh: "城市环境", en: "Urban Environment" },
   role: { zh: "设计师", en: "Designer" },
-  image: "./images/portfolio-cover/cover6.jpg",
+  image: "/images/portfolio-cover/cover6.jpg",
   intro: { zh: "收录其他艺术与设计相关项目。", en: "Collection of other art and design related projects." },
 
   layoutType: "grid",
@@ -374,25 +374,25 @@ export const WORKS: Work[] = [
     {
       title: { zh: "书籍设计", en: "Book Design" },
       images: [
-        "./images/portfolio/other/book/1.jpg",
-        "./images/portfolio/other/book/2.jpg",
-        "./images/portfolio/other/book/3.jpg",
-        "./images/portfolio/other/book/4.jpg",
-        "./images/portfolio/other/book/5.jpg",
-        "./images/portfolio/other/book/6.jpg",
-        "./images/portfolio/other/book/7.jpg",
-        "./images/portfolio/other/book/8.jpg",
-        "./images/portfolio/other/book/9.jpg",
-        "./images/portfolio/other/book/10.jpg",
-        "./images/portfolio/other/book/11.jpg",
-        "./images/portfolio/other/book/12.jpg"
+        "/images/portfolio/other/book/1.jpg",
+        "/images/portfolio/other/book/2.jpg",
+        "/images/portfolio/other/book/3.jpg",
+        "/images/portfolio/other/book/4.jpg",
+        "/images/portfolio/other/book/5.jpg",
+        "/images/portfolio/other/book/6.jpg",
+        "/images/portfolio/other/book/7.jpg",
+        "/images/portfolio/other/book/8.jpg",
+        "/images/portfolio/other/book/9.jpg",
+        "/images/portfolio/other/book/10.jpg",
+        "/images/portfolio/other/book/11.jpg",
+        "/images/portfolio/other/book/12.jpg"
       ]
     },
     {
       title: { zh: "雕塑", en: "Sculpture" },
       images: [
-        "./images/portfolio/other/sculpture/1.jpg",
-        "./images/portfolio/other/sculpture/2.jpg"
+        "/images/portfolio/other/sculpture/1.jpg",
+        "/images/portfolio/other/sculpture/2.jpg"
       ]
     }
   ]
