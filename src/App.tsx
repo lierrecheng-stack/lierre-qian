@@ -43,53 +43,87 @@ function Portfolio() {
   const t = translations[lang];
 
   const { scrollY } = useScroll();
-  const portraitY = useTransform(scrollY, [0, 500], [0, 100]);
-  const titleOpacity = useTransform(scrollY, [0, 300], [0, 0.4]);
-  const titleScale = useTransform(scrollY, [0, 300], [1, 1.1]);
 
   return (
     <div className="min-h-screen selection:bg-accent selection:text-white">
       <Nav lang={lang} setLang={setLang} />
 
       {/* Hero Section */}
-      <header className="relative min-h-screen flex flex-col items-center overflow-hidden bg-black">
-        <div className="absolute top-1/4 left-1/4 w-[60vw] h-[60vw] bg-accent/20 rounded-full blur-[150px] pointer-events-none animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[50vw] h-[50vw] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="noise-overlay opacity-20 mix-blend-overlay" />
-        
-        <motion.div
-          style={{ y: portraitY }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-20 w-full"
-        >
-          <div className="w-full">
+      <header className="relative min-h-screen grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-paper">
+        {/* Left Column: Image */}
+        <div className="relative h-[60vh] md:h-screen overflow-hidden border-r border-white/5">
+          <motion.div 
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full h-full"
+          >
             <img 
               src={globals.heroImage} 
-              alt="Qian Cheng" 
-              className="w-full h-auto block"
+              alt="Lierre Cheng" 
+              className="w-full h-full object-cover brightness-90 contrast-110"
               referrerPolicy="no-referrer"
             />
-          </div>
-        </motion.div>
-
-        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-          <motion.div style={{ opacity: titleOpacity, scale: titleScale }} className="flex flex-col items-center">
-            <h1 className="text-6xl md:text-[18vw] font-bold text-accent tracking-tighter uppercase leading-none select-none">
-              welcome to my <br className="md:hidden" /> fancyland
-            </h1>
           </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
+          <div className="noise-overlay opacity-10" />
         </div>
-        
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-black/40 backdrop-blur-xl border-t border-white/5 flex items-center justify-between px-12 z-30">
-          <div className="flex gap-8">
-            <span className="text-white/40 text-[10px] tracking-widest uppercase font-mono">Architect</span>
-            <span className="text-white/40 text-[10px] tracking-widest uppercase font-mono">Designer</span>
-          </div>
-          <p className="text-white/60 text-[10px] tracking-[0.4em] uppercase font-mono">Qian Cheng — 2026</p>
-          <div className="flex gap-8">
-            <span className="text-white/40 text-[10px] tracking-widest uppercase font-mono">Portfolio</span>
+
+        {/* Right Column: Text Content */}
+        <div className="flex flex-col justify-center p-8 md:p-24 space-y-16 bg-paper relative">
+          <div className="noise-overlay opacity-5" />
+          
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-8 relative z-10"
+          >
+            <div className="space-y-2">
+              <span className="text-accent font-mono text-[10px] tracking-[0.5em] uppercase font-bold">Architectural Designer</span>
+              <h1 className="text-6xl md:text-9xl font-light tracking-tighter text-white uppercase leading-[0.85]">
+                LIERRE <br /> CHENG
+              </h1>
+            </div>
+            
+            <div className="space-y-6 max-w-md">
+              <p className="text-white/90 font-light text-xl md:text-2xl leading-tight tracking-tight">
+                AI-Driven Spatial Designer
+              </p>
+              <p className="text-white/40 font-light text-sm md:text-base leading-relaxed tracking-wide">
+                Exploring the Intersection of Architecture, Ecology, and Technology
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="relative z-10"
+          >
+            <button 
+              onClick={() => document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group flex items-center gap-6 text-white/60 hover:text-accent transition-all duration-500"
+            >
+              <span className="font-mono text-[11px] uppercase tracking-[0.5em] font-light">Explore Work ↓</span>
+              <div className="relative flex items-center">
+                <div className="w-16 h-px bg-white/10 group-hover:bg-accent group-hover:w-32 transition-all duration-700 ease-in-out" />
+                <div className="absolute right-0 w-1 h-1 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              </div>
+            </button>
+          </motion.div>
+
+          {/* Bottom Meta Info */}
+          <div className="absolute bottom-12 left-8 md:left-24 flex gap-12 opacity-20">
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-mono uppercase tracking-widest">Location</span>
+              <span className="text-[10px] font-light">Beijing / Global</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[9px] font-mono uppercase tracking-widest">Year</span>
+              <span className="text-[10px] font-light">2026</span>
+            </div>
           </div>
         </div>
       </header>

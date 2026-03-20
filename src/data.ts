@@ -304,11 +304,11 @@ export const WORKS: Work[] = [
     image: "/images/portfolio-cover/cover2.jpg",
     intro: { zh: "本项目关注城市中流浪动物的生活空间。", en: "This project focuses on urban stray animals' living spaces." },
     gallery: [
-      "/images/portfolio/relief/1.jpg",
-      "/images/portfolio/relief/2.jpg",
-      "/images/portfolio/relief/3.jpg",
-      "/images/portfolio/relief/4.jpg",
-      "/images/portfolio/relief/5.jpg"
+      "/images/portfolio/dog/1.jpg",
+      "/images/portfolio/dog/2.jpg",
+      "/images/portfolio/dog/3.jpg",
+      "/images/portfolio/dog/4.jpg",
+      "/images/portfolio/dog/5.jpg"
     ]
   },
   {
@@ -351,10 +351,11 @@ export const WORKS: Work[] = [
     image: "/images/portfolio-cover/cover5.jpg",
     intro: { zh: "探索工作空间的设计创新。", en: "Exploring innovative design for workplace spaces." },
     gallery: [
-      "/images/portfolio/yipai/1.jpg",
-      "/images/portfolio/yipai/2.jpg",
-      "/images/portfolio/yipai/3.jpg",
-      "/images/portfolio/yipai/4.jpg"
+      "/images/portfolio/workplace/1.jpg",
+      "/images/portfolio/workplace/2.jpg",
+      "/images/portfolio/workplace/3.jpg",
+      "/images/portfolio/workplace/4.jpg",
+      "/images/portfolio/workplace/5.jpg"
     ]
   },
 {
