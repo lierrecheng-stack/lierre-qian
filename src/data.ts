@@ -97,7 +97,7 @@ export const translations = {
     },
     internship: { title: "实习经历", label: "Professional" },
     projects: { title: "项目经历", label: "Projects" },
-    contact: { title: "联系我", label: "Connect", desc: "让我们聊聊你的下一个创意项目" },
+    contact: { title: "联系我", label: "Connect", desc: "My life is my work" },
     footer: "精心设计 / 追求影响力"
   },
   en: {
