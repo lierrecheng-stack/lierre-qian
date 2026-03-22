@@ -41,6 +41,7 @@ export interface Work {
   image: string;
   intro: LocalizedString;
   description?: LocalizedString;
+  tags: string[];
   gallery?: string[];
   layoutType?: 'gallery' | 'waterfall' | 'grid';
   waterfallImages?: string[];
@@ -184,12 +185,12 @@ export const SKILLS = [
 
 export const INTERNSHIP = {
   company: { zh: "中国城市规划设计研究院 (CAUPD)", en: "China Academy of Urban Planning & Design (CAUPD)" },
-  role: { zh: "设计项目管理实习生", en: "Design Project Management Intern" },
+  role: { zh: "AI辅助设计实习生", en: "Ai-assisted design" },
   time: "2024.07 - 2024.09",
   details: {
-    zh: [
+  zh: [
       "用户调研与需求洞察：围绕坝河口公共空间项目，通过实地走访，访谈 120+位用户，结合SWOT及业态分析，提炼出安全性、识别度、文化表达 3 大设计需求维度，构建明确的评估标准。",
-      "AI视觉创意与评估：运用Midjourney、Stable Diffusion等工具，根据需求维度针对性生成 20+ 版概念参考图。对生成结果的视觉比例、风格统一性及场景匹配度进行评估筛选，沉淀出一套适用于公共设施的视觉风格方案。",
+      "AI视觉创意与评估：运用Midjourney、Stable Diffusion等工具，根据需求维度针对性生成 20+ 版概念参考图。对生成结果的视觉比例、风格统一性及场景匹配度进行评估筛选，沉淀出一套适用于公共设施的视觉风格方案。 ",
       "美学落地与体验优化：协同技术团队将方案落地至护栏高度、扶手弧度等具体细节。结合人体工学与使用场景进行 5轮体验调优，在保障安全功能的同时提升了文化审美表达，推动方案采纳，并将调优思路沉淀为可复用的SOP。"
     ],
     en: [
@@ -208,7 +209,7 @@ export const PROJECTS: Project[] = [
     subtitle: { zh: "核心成员", en: "Core Member" },
     note: { zh: "河北省乡村振兴示范基地", en: "Hebei Rural Revitalization Demonstration Base" },
     time: "2024.09 - 2024.12",
-    intro: { zh: "面向山区公共空间闲置、既有植被与建设冲突等问题，带领团队勘察6处街区。", en: "Led a team to survey 6 blocks addressing issues of idle public spaces and conflicts between vegetation and construction in mountainous areas." },
+    intro: { zh: "基于乡土学社定位的区域内首个研学公共空间。", en: "The first public space for study Tours in the region based on the positioning of the local Studies Society." },
     description: { 
       zh: "用户调研：面对山区公共空间狭窄、既有植被与建设冲突等问题，带领团队勘察6处街区，通过投放问卷、深度访谈居民、政府、校企三类群体共52人，明确“动线优化、寓教于学”需求。\n\n产品定位：提出“乡土学社”定位，将空间设计与教育研学结合，打造文化展示与场景体验于一体的实体产品。\n\n项目管理与成果：与施工方进行了10余次的设计对接，持续优化模型与图纸，确保设计意图清晰传递并落地实现。建立了校地共管的长效运营机制，保障产品可持续使用。项目建成后成为当地首个“乡土研学”主题公共空间，被列为区域乡村全面振兴的示范案例。", 
       en: "User Research: Led a team to survey 6 blocks, conducting questionnaires and in-depth interviews with 52 people from residents, government, and school-enterprise groups to clarify the needs for 'route optimization and learning through education'.\n\nProduct Positioning: Proposed the 'Rural Academy' positioning, combining spatial design with educational research to create a physical product integrating cultural display and scene experience.\n\nProject Management: Conducted 10+ design meetings with the construction side, optimizing models and drawings to ensure clear design intent. Established a long-term operation mechanism to ensure sustainable use. Became the first 'Rural Study' theme public space in the area." 
@@ -285,6 +286,7 @@ export const WORKS: Work[] = [
     location: { zh: "雪山环境", en: "Snow Mountain Environment" },
     role: { zh: "主创设计师", en: "Lead Designer" },
     image: "/images/portfolio-cover/cover1.jpg",
+    tags: ["游戏景观", "优秀毕业设计"],
     intro: { zh: "将“异托邦”概念引入雪山环境下的景观设计领域。", en: "Introducing the concept of 'Heterotopia' into snow mountain landscape design." },
     gallery: [
       "/images/portfolio/snowmountain/1.jpg",
@@ -294,12 +296,13 @@ export const WORKS: Work[] = [
   },
   {
     id: "relief",
-    title: { zh: "流浪动物也是地球上的珍贵生命", en: "Stray animals are also precious beings on the earth" },
+    title: { zh: "人宠城市更新", en: "Human-pet urban renewal" },
     category: { zh: "公益设计", en: "Public Welfare" },
     time: "2024",
     location: { zh: "城市空间", en: "Urban Space" },
     role: { zh: "景观规划设计", en: "Independent Designer" },
     image: "/images/portfolio-cover/cover2.jpg",
+    tags: ["景观规划", "App界面设计"],
     intro: { zh: "本项目关注城市中流浪动物的生活空间。", en: "This project focuses on urban stray animals' living spaces." },
     gallery: [
       "/images/portfolio/dog/1.jpg",
@@ -317,6 +320,7 @@ export const WORKS: Work[] = [
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
     image: "/images/portfolio-cover/cover3.jpg",
+    tags: ["生态建筑", "Evolo上榜作品"],
     intro: { zh: "探索高塔空间的景观设计理念。", en: "Exploring design concepts for tower spaces." },
     gallery: [
       "/images/portfolio/tower/1.jpg",
@@ -332,6 +336,7 @@ export const WORKS: Work[] = [
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
     image: "/images/portfolio-cover/cover4.jpg",
+    tags: ["数字景观", "参数化模拟"],
     intro: { zh: "探索城市园艺空间设计的创新方式。", en: "Exploring innovative approaches to urban garden design." },
     gallery: [
       "/images/portfolio/garden/1.jpg",
@@ -347,6 +352,7 @@ export const WORKS: Work[] = [
     location: { zh: "城市环境", en: "Urban Environment" },
     role: { zh: "设计师", en: "Designer" },
     image: "/images/portfolio-cover/cover5.jpg",
+    tags: ["空间叙事", "学院杯国奖"],
     intro: { zh: "探索工作空间的设计创新。", en: "Exploring innovative design for workplace spaces." },
     gallery: [
       "/images/portfolio/workplace/1.jpg",
@@ -364,6 +370,7 @@ export const WORKS: Work[] = [
   location: { zh: "城市环境", en: "Urban Environment" },
   role: { zh: "设计师", en: "Designer" },
   image: "/images/portfolio-cover/cover6.jpg",
+  tags: ["平面&造型", "华艺杯金奖"],
   intro: { zh: "收录其他艺术与设计相关项目。", en: "Collection of other art and design related projects." },
 
   layoutType: "grid",

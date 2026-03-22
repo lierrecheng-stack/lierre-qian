@@ -63,16 +63,16 @@ const WorkDetail = () => {
 
   if (!work || !isLoaded) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-white text-zinc-900">
+      <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-paper text-ink">
         {!work ? (
           <>
-            <h1 className="text-4xl mb-4 font-bold tracking-tight">Work Not Found</h1>
-            <Link to="/#works" className="text-zinc-500 hover:text-black underline font-mono text-xs uppercase tracking-widest">Back to Portfolio</Link>
+            <h1 className="text-4xl mb-4 font-bold tracking-tight text-accent">Work Not Found</h1>
+            <Link to="/#works" className="text-ink/40 hover:text-accent underline font-sans text-[10px] font-bold uppercase tracking-[0.2em]">Back to Portfolio</Link>
           </>
         ) : (
           <div className="space-y-4">
             <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-400">Loading Experience...</p>
+            <p className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-ink/40">Loading Experience...</p>
           </div>
         )}
       </div>
@@ -105,20 +105,20 @@ const WorkDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-accent selection:text-white font-sans overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-paper text-ink selection:bg-accent selection:text-white font-sans overflow-hidden flex flex-col">
       {/* Minimal Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center pointer-events-none">
       <button
   onClick={() => navigate(-1)}
-  className="flex items-center gap-2 text-white/50 hover:text-accent transition-colors pointer-events-auto bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/5"
+  className="flex items-center gap-3 text-ink/60 hover:text-accent transition-all pointer-events-auto bg-paper/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/5 shadow-sm"
 >
   <ArrowLeft size={16} />
-  <span className="text-[10px] font-bold tracking-[0.3em] uppercase">
+  <span className="text-[11px] font-bold tracking-[0.2em] uppercase">
     Back to Portfolio
   </span>
 </button>
         {work.id !== 'utopia' && (
-          <div className="text-white/30 text-[10px] font-mono tracking-widest uppercase bg-black/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/5 pointer-events-auto">
+          <div className="text-ink/30 text-[11px] font-bold tracking-[0.2em] uppercase bg-paper/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/5 shadow-sm pointer-events-auto">
             {work.title[lang]}
           </div>
         )}
@@ -127,15 +127,15 @@ const WorkDetail = () => {
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center">
         {(work.layoutType === 'gallery' || (!work.layoutType && work.gallery)) && work.gallery && work.gallery.length > 0 ? (
-          <div className="w-full h-screen flex items-center justify-center overflow-hidden bg-black">
+          <div className="w-full h-screen flex items-center justify-center overflow-hidden bg-paper">
             <div className="relative w-full h-full flex items-center justify-center">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={`${work.id}-${currentSlide}`}
-                  initial={{ opacity: 0, scale: 1.05 }}
+                  initial={{ opacity: 0, scale: 1.02 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                   src={work.gallery[currentSlide] || ''}
                   alt={`Slide ${currentSlide}`}
                   className="w-full h-full object-contain"
@@ -147,45 +147,45 @@ const WorkDetail = () => {
               <div className="absolute inset-0 flex items-center justify-between px-6 md:px-12 opacity-0 hover:opacity-100 transition-opacity duration-500">
                 <button 
                   onClick={prevSlide} 
-                  className="p-4 md:p-6 bg-white/5 backdrop-blur-xl rounded-full text-white hover:bg-accent hover:scale-110 transition-all duration-300 border border-white/10"
+                  className="p-5 bg-paper/80 backdrop-blur-xl rounded-full text-ink hover:text-accent hover:scale-110 transition-all duration-300 border border-white/5 shadow-xl"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button 
                   onClick={nextSlide} 
-                  className="p-4 md:p-6 bg-white/5 backdrop-blur-xl rounded-full text-white hover:bg-accent hover:scale-110 transition-all duration-300 border border-white/10"
+                  className="p-5 bg-paper/80 backdrop-blur-xl rounded-full text-ink hover:text-accent hover:scale-110 transition-all duration-300 border border-white/5 shadow-xl"
                 >
                   <ChevronRight size={24} />
                 </button>
               </div>
 
               {/* Indicators */}
-              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3">
                 {work.gallery.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentSlide(i)}
-                    className={`h-0.5 transition-all duration-700 rounded-full ${currentSlide === i ? 'w-16 bg-accent' : 'w-4 bg-white/10 hover:bg-white/30'}`}
+                    className={`h-1 transition-all duration-700 rounded-full ${currentSlide === i ? 'w-12 bg-accent' : 'w-3 bg-white/10 hover:bg-white/20'}`}
                   />
                 ))}
               </div>
             </div>
           </div>
         ) : (
-          <div className="w-full h-screen overflow-y-auto no-scrollbar bg-black">
-            <div className="max-w-7xl mx-auto px-6 py-32 space-y-32">
+          <div className="w-full h-screen overflow-y-auto no-scrollbar bg-paper">
+            <div className="max-w-7xl mx-auto px-6 py-48 space-y-48">
               {/* Handle Image Groups if they exist (e.g., for 'others') */}
               {work.imageGroups ? (
                 work.imageGroups.map((group, groupIdx) => (
-                  <div key={groupIdx} className="space-y-12">
-                    <div className="space-y-2 border-l-2 border-accent pl-6">
-                      <h2 className="text-3xl font-bold tracking-tight uppercase">{group.title[lang]}</h2>
-                      <div className="h-px w-12 bg-accent/30" />
+                  <div key={groupIdx} className="space-y-16">
+                    <div className="space-y-4 border-l-4 border-accent pl-8">
+                      <h2 className="text-4xl font-bold tracking-tight uppercase text-accent">{group.title[lang]}</h2>
+                      <div className="h-px w-16 bg-accent/40" />
                     </div>
                     
                     {/* Use waterfall for first group, vertical for others as per request */}
                     {groupIdx === 0 ? (
-                      <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                      <div className="columns-1 md:columns-2 lg:columns-3 gap-12 space-y-12">
                         {group.images.map((img, idx) => (
                           <motion.div
                             key={idx}
@@ -193,7 +193,7 @@ const WorkDetail = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.05 }}
-                            className="break-inside-avoid rounded-2xl overflow-hidden bg-white/5 group"
+                            className="break-inside-avoid rounded-2xl overflow-hidden bg-white/5 group shadow-sm hover:shadow-2xl hover:shadow-white/5 transition-all duration-500"
                           >
                             <img 
                               src={img} 
@@ -206,14 +206,14 @@ const WorkDetail = () => {
                         ))}
                       </div>
                     ) : (
-                      <div className="space-y-24">
+                      <div className="space-y-32">
                         {group.images.map((img, idx) => (
                           <motion.div
                             key={idx}
                             initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white/5 group shadow-2xl"
+                            className="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white/5 group shadow-2xl shadow-white/5"
                           >
                             <img 
                               src={img} 
@@ -232,7 +232,7 @@ const WorkDetail = () => {
                 <>
                   {/* Waterfall Section (Masonry-like Grid) */}
                   {work.waterfallImages && (
-                    <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                    <div className="columns-1 md:columns-2 lg:columns-3 gap-12 space-y-12">
                       {work.waterfallImages.map((img, idx) => (
                         <motion.div
                           key={idx}
@@ -240,7 +240,7 @@ const WorkDetail = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: idx * 0.05 }}
-                          className="break-inside-avoid rounded-2xl overflow-hidden bg-white/5 group"
+                          className="break-inside-avoid rounded-2xl overflow-hidden bg-white/5 group shadow-sm hover:shadow-2xl hover:shadow-white/5 transition-all duration-500"
                         >
                           <img 
                             src={img} 
@@ -256,19 +256,19 @@ const WorkDetail = () => {
 
                   {/* Vertical Images Section (Large Display) */}
 {work.verticalImages && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
     {work.verticalImages.map((img, idx) => (
       <motion.div
         key={idx}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: idx * 0.1 }}
-        className="overflow-hidden rounded-2xl group cursor-pointer"
+        className="overflow-hidden rounded-2xl group cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-white/5 transition-all duration-500"
       >
         <img
           src={img}
           alt=""
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
         />
       </motion.div>
