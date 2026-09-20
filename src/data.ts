@@ -154,52 +154,79 @@ export const translations = {
 export const EDUCATION = [
   {
     school: { zh: "香港大学 (HKU)", en: "The University of Hong Kong (HKU)" },
-    degree: { zh: "创新技术与设计 (已录取) - 理学硕士", en: "MSc in Innovative Design and Technology (Admitted)" },
+    degree: { zh: "创新技术与设计 - 理学硕士", en: "MSc in Innovative Design and Technology (Admitted)" },
     time: "2025.09 - 2028.06",
-    details: { zh: "", en: "" }
+    details: { zh: "相关课程：无人机设计、导航与控制；电子移动与商务；机电系统一体化", en: "Relevant Courses: Drone Design, Navigation and Control; E-Mobility and E-Commerce; Mechatronic Systems Integration" }
   },
   {
     school: { zh: "中央民族大学 (MUC)", en: "Minzu University of China (MUC)" },
     degree: { zh: "环境设计 - 硕士 (保研)", en: "MA in Environmental Design (Recommended)" },
-    time: "2025.09 - 至今",
-    details: { zh: "GPA: 4.08/5.00 (前10%)。连续三年获校级奖学金及优秀毕业设计。", en: "GPA: 4.08/5.00 (Top 10%). School scholarships for 3 consecutive years and Excellent Graduation Design." }
+    time: "2025.09 - 2029.06",
+    details: { 
+      zh: "相关课程：民族景区规划与旅游一体化设计；展览与营销空间设计\n研究生学业奖学金", 
+      en: "Relevant Courses: Ethnic Scenic Area Planning and Tourism Integration Design; Exhibition and Marketing Space Design\nGraduate Academic Scholarship" 
+    }
   },
   {
     school: { zh: "中央民族大学 (MUC)", en: "Minzu University of China (MUC)" },
     degree: { zh: "环境设计 - 本科", en: "BA in Environmental Design" },
     time: "2021.09 - 2025.06",
-    details: { zh: "", en: "" }
+    details: { zh: "GPA: 4.08/5.00 (前10%)。连续三年获校级奖学金及优秀毕业设计。", en: "GPA: 4.08/5.00 (Top 10%). School scholarships for 3 consecutive years and Excellent Graduation Design." }
   }
 ];
 
 export const HONORS = [
   { zh: "中国工艺美术学会会员", en: "Member of Chinese Arts and Crafts Association" },
-  { zh: "安徽省美术家协会会员", en: "Member of Anhui Fine Arts Association" }
+  { zh: "安徽省美术家协会会员", en: "Member of Anhui Fine Arts Association" },
+  { zh: "国家级奖项3项", en: "3 national-level awards" }
 ];
 
 export const SKILLS = [
   { category: { zh: "语言沟通", en: "Communication" }, items: ["IELTS 7.0", { zh: "普通话二级甲等", en: "Mandarin Level 2-A" }] },
-  { category: { zh: "产品设计", en: "Product Design" }, items: ["Xmind", "Figma", "PS", "AI", "Rhino", "Grasshopper", "Mj", "SD"] },
+  { category: { zh: "产品设计", en: "Product Design" }, items: ["Xmind", "Figma", "PS", "AI", "Rhino", "Grasshopper", "Midjourney", "NanoBanana"] },
   { category: { zh: "数据分析", en: "Data Analysis" }, items: ["EXCEL", "SQL", "GIS"] }
 ];
 
-export const INTERNSHIP = {
-  company: { zh: "中国城市规划设计研究院 (CAUPD)", en: "China Academy of Urban Planning & Design (CAUPD)" },
-  role: { zh: "AI辅助设计实习生", en: "Ai-assisted design" },
-  time: "2024.07 - 2024.09",
-  details: {
-  zh: [
-      "用户调研与需求洞察：围绕坝河口公共空间项目，通过实地走访，访谈 120+位用户，结合SWOT及业态分析，提炼出安全性、识别度、文化表达 3 大设计需求维度，构建明确的评估标准。",
-      "AI视觉创意与评估：运用Midjourney、Stable Diffusion等工具，根据需求维度针对性生成 20+ 版概念参考图。对生成结果的视觉比例、风格统一性及场景匹配度进行评估筛选，沉淀出一套适用于公共设施的视觉风格方案。 ",
-      "美学落地与体验优化：协同技术团队将方案落地至护栏高度、扶手弧度等具体细节。结合人体工学与使用场景进行 5轮体验调优，在保障安全功能的同时提升了文化审美表达，推动方案采纳，并将调优思路沉淀为可复用的SOP。"
-    ],
-    en: [
-      "User research and demand Insight: Focusing on the public space project at the Dam Estuary, through on-site visits and interviews with over 120 users, combined with SWOT and business type analysis, three major design demand dimensions of safety, recognition, and cultural expression were extracted, and clear evaluation criteria were established.",
-      "AI Visual Creativity and Evaluation: Utilizing tools such as Midjourney and Stable Diffusion, generate over 20 versions of concept reference images specifically based on the demand dimensions. Evaluate and screen the visual proportions, style uniformity and scene matching degree of the generated results, and distill a set of visual style solutions suitable for public facilities.",
-      "Aesthetic implementation and experience optimization: Collaborate with the technical team to implement the solution in specific details such as the height of the guardrail and the curvature of the handrail. Five rounds of experience optimization were carried out in combination with ergonomics and usage scenarios. While ensuring safety functions, the cultural aesthetic expression was enhanced, promoting the adoption of the plan and consolidating the optimization ideas into reusable Sops."
-    ]
+export const INTERNSHIPS = [
+  {
+    company: { zh: "特斯拉汽车（北京）有限公司", en: "Tesla Motors (Beijing) Co., Ltd." },
+    role: { zh: "线上用户增长与运营实习生", en: "Online User Growth & Operations Intern" },
+    time: "2026.03 - 2026.07",
+    details: {
+      zh: [
+        "岗位职责：以“AI+软件”核心产品力为背景，围绕FSD与智能生态传播逻辑，独立负责北京区域线上增长与社媒矩阵运营，统筹内容策划，驱动区域用户认知度与线索转化提升。",
+        "爆款内容策划与产出：针对本地内容量不足，发起北京26蟹岛车主采访，完成选题策划、现场采访、视频剪辑全流程；4个月实现账号涨粉1W+，自然曝光月均提升68%，产出2条50w+爆款视频，内容被官方渠道复用。",
+        "KOS运营与线索转化：统筹北京小红书KOS账号全链路运营，建立“数据复盘-分层目标-标准化执行”闭环，并根据账号流量制定差异化运营动作；将颐堤港账号从腰部孵化至全国Top20，单周线索20+，周留资率最高80%。",
+        "AI提效与风控搭建：针对人工监控低效痛点，搭建AI双角色看板监控留存与转化；同步建立区域敏感词库与合规模板，驱动内容策略周级迭代。"
+      ],
+      en: [
+        "Core Responsibilities: With “AI + software” as the core product proposition, focused on the communication strategy of FSD and Tesla’s intelligent ecosystem. Independently managed online growth and social media operations in the Beijing region, coordinated content planning, and drove improvements in regional user awareness and lead conversion.",
+        "Viral Content Strategy & Production: Addressed the lack of localized content by initiating owner interviews at Beijing 26 Xiandao, and managed the full process from topic planning and on-site interviews to video editing. Achieved 10,000+ new followers within four months, increased average monthly organic exposure by 68%, produced two viral videos with 500K+ views, and had the content reused by official channels.",
+        "KOS Operations & Lead Conversion: Managed the full lifecycle of Beijing Xiaohongshu KOS accounts, establishing a “data review - tiered objectives - standardized execution” operating loop and developing differentiated strategies based on account traffic. Scaled the Yintihang account from a mid-tier account to the national Top 20, generating 20+ leads per week with a peak weekly lead conversion rate of 80%.",
+        "AI Efficiency & Risk Control: Addressed the inefficiency of manual monitoring by building an AI dual-role dashboard to monitor retention and conversion. Established a regional sensitive-word database and compliance templates, enabling weekly iteration of content strategies."
+      ]
+    }
+  },
+  {
+    company: { zh: "中国城市规划设计研究院 (CAUPD)", en: "China Academy of Urban Planning & Design (CAUPD)" },
+    role: { zh: "AI辅助设计实习生", en: "Ai-assisted design" },
+    time: "2024.07 - 2024.09",
+    details: {
+      zh: [
+        "用户调研与需求洞察：围绕坝河口公共空间项目，通过实地走访，访谈 120+位用户，结合SWOT及业态分析，提炼出安全性、识别度、文化表达 3 大设计需求维度，构建明确的评估标准。",
+        "AI视觉创意与评估：运用Midjourney、Stable Diffusion等工具，根据需求维度针对性生成 20+ 版概念参考图。对生成结果的视觉比例、风格统一性及场景匹配度进行评估筛选，沉淀出一套适用于公共设施的视觉风格方案。 ",
+        "美学落地与体验优化：协同技术团队将方案落地至护栏高度、扶手弧度等具体细节。结合人体工学与使用场景进行 5轮体验调优，在保障安全功能的同时提升了文化审美表达，推动方案采纳，并将调优思路沉淀为可复用的SOP。"
+      ],
+      en: [
+        "User research and demand Insight: Focusing on the public space project at the Dam Estuary, through on-site visits and interviews with over 120 users, combined with SWOT and business type analysis, three major design demand dimensions of safety, recognition, and cultural expression were extracted, and clear evaluation criteria were established.",
+        "AI Visual Creativity and Evaluation: Utilizing tools such as Midjourney and Stable Diffusion, generate over 20 versions of concept reference images specifically based on the demand dimensions. Evaluate and screen the visual proportions, style uniformity and scene matching degree of the generated results, and distill a set of visual style solutions suitable for public facilities.",
+        "Aesthetic implementation and experience optimization: Collaborate with the technical team to implement the solution in specific details such as the height of the guardrail and the curvature of the handrail. Five rounds of experience optimization were carried out in combination with ergonomics and usage scenarios. While ensuring safety functions, the cultural aesthetic expression was enhanced, promoting the adoption of the plan and consolidating the optimization ideas into reusable Sops."
+      ]
+    }
   }
-};
+];
+
+export const INTERNSHIP = INTERNSHIPS[1];
 
 // ---------------------- PROJECTS ----------------------
 export const PROJECTS: Project[] = [
