@@ -17,7 +17,7 @@ import {
   EDUCATION, 
   HONORS,
   SKILLS, 
-  INTERNSHIP, 
+  INTERNSHIPS, 
   PROJECTS, 
   WORKS 
 } from './data';
@@ -166,7 +166,7 @@ function Portfolio() {
                         <span className="font-sans text-xs font-bold text-ink/30 tracking-wider">{edu.time}</span>
                       </div>
                       <p className="text-base font-medium text-ink/70">{edu.degree[lang]}</p>
-                      <p className="text-sm text-ink/40 leading-relaxed font-normal">{edu.details[lang]}</p>
+                      <p className="text-sm text-ink/40 leading-relaxed font-normal whitespace-pre-line">{edu.details[lang]}</p>
                     </div>
                   ))}
                 </div>
@@ -225,25 +225,30 @@ function Portfolio() {
             <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-tight text-accent">{t.internship.title}</h2>
           </div>
           
-          <div className="grid md:grid-cols-12 gap-16">
-            <div className="md:col-span-4 space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-4xl font-bold text-accent leading-tight">{INTERNSHIP.company[lang]}</h3>
-                <p className="text-ink/40 font-bold text-xs uppercase tracking-[0.2em]">{INTERNSHIP.role[lang]}</p>
-              </div>
-              <div className="h-px w-16 bg-accent/30" />
-              <p className="font-sans text-xs font-bold text-ink/20 tracking-widest">{INTERNSHIP.time}</p>
-            </div>
-            <div className="md:col-span-8 space-y-12">
-              {INTERNSHIP.details[lang].map((detail, i) => (
-                <div key={i} className="group border-b border-white/5 pb-10 last:border-0">
-                  <div className="flex gap-8 items-start">
-                    <span className="text-accent/20 font-bold text-4xl md:text-5xl leading-none">0{i+1}</span>
-                    <p className="text-xl md:text-2xl leading-relaxed text-ink/80 group-hover:text-ink transition-colors duration-300 font-light">{detail}</p>
+          <div className="space-y-32">
+            {INTERNSHIPS.map((internship, idx) => (
+              <div key={idx} className="grid md:grid-cols-12 gap-16 border-b border-white/5 pb-32 last:border-0 last:pb-0">
+                <div className="md:col-span-4 space-y-6">
+                  <div className="space-y-2">
+                    <span className="label-mono text-accent/50 block">0{idx + 1}</span>
+                    <h3 className="text-4xl font-bold text-accent leading-tight">{internship.company[lang]}</h3>
+                    <p className="text-ink/40 font-bold text-xs uppercase tracking-[0.2em]">{internship.role[lang]}</p>
                   </div>
+                  <div className="h-px w-16 bg-accent/30" />
+                  <p className="font-sans text-xs font-bold text-ink/20 tracking-widest">{internship.time}</p>
                 </div>
-              ))}
-            </div>
+                <div className="md:col-span-8 space-y-12">
+                  {internship.details[lang].map((detail, i) => (
+                    <div key={i} className="group border-b border-white/5 pb-10 last:border-0">
+                      <div className="flex gap-8 items-start">
+                        <span className="text-accent/20 font-bold text-4xl md:text-5xl leading-none">0{i+1}</span>
+                        <p className="text-xl md:text-2xl leading-relaxed text-ink/80 group-hover:text-ink transition-colors duration-300 font-light">{detail}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
